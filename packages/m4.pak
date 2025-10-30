@@ -1,0 +1,6 @@
+PACKAGE="m4"
+VERSION="latest"
+SOURCE="tarball"
+LINK="ftp.iij.ad.jp/pub/gnu/m4/m4-latest.tar.gz"
+PREREQ_TESTS="curl google.com; gzip --version; cc --version; bash --version; make --version; ld --version; grep --version; sed --version"
+ERROR_MESSAGE="M4 is very simple to build. Install clang, curl, gzip, bash, make, Darwin CC Tools, grep, sed from Cydia (my repo and BigBoss)"
