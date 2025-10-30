@@ -1,0 +1,22 @@
+#!/bin/bash
+
+PROMPT="$(uname -s)$(uname -r)> "
+
+while true; do
+    read -p "$PROMPT" CMD PKG VER
+
+    case "$CMD" in
+        "build")
+            ./core/build.sh "$PKG"
+            ;;
+	"help")
+	    echo -e "iOSBld version 1.\n\nList of commands:\nbuild <pkg> - build and install package\nexit - quit iosbld"
+	    ;;
+        "exit" | "quit")
+            break
+            ;;
+        *)
+            echo 'Unknown command: $CMD. Use "help"'
+            ;;
+    esac
+done

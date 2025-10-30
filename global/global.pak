@@ -1,0 +1,11 @@
+PREFIX=/usr
+CHECK_EXIT_CODE="if [ $? -ne 0 ]; then exit 1; fi"
+CHECK_CURL="curl -sS google.com > /dev/null; $CHECK_EXIT_CODE"
+CHECK_GZIP="gzip --version > /dev/null; $CHECK_EXIT_CODE"
+CHECK_MAKE="make --version > /dev/null; $CHECK_EXIT_CODE"
+CHECK_CCTOOLS="ld --version > /dev/null; $CHECK_EXIT_CODE"
+CHECK_GREP="grep --version > /dev/null; $CHECK_EXIT_CODE"
+CHECK_SED="sed --version > /dev/null; $CHECK_EXIT_CODE"
+CHECK_CC="cc --version > /dev/null; $CHECK_EXIT_CODE"
+BASIC_TESTS="$CHECK_CURL; $CHECK_CC; $CHECK_CCTOOLS"
+
